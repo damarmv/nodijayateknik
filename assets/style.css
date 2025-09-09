@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #f5f5f5;
+  border-bottom: 2px solid #ddd;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.logo-section img {
+  width: 70px;
+}
+.slogan {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+.contact li {
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
