@@ -24,16 +24,6 @@ Website profil resmi **Nodi Jaya Teknik** – penyedia jasa **pemasangan panel l
 
 ---
 
-## 🔧 Cara Pakai
-1. Simpan file **index.html** di folder utama project.
-2. Buka file `index.html` dengan browser untuk melihat tampilan website.
-3. Untuk edit konten:
-   - **Judul & deskripsi SEO** → edit di bagian `<head>`.
-   - **Teks Tentang Kami & Layanan** → edit di `<section id="about">` & `<section id="layanan">`.
-   - **Kontak** → update email, WhatsApp, telepon di `<section id="kontak">`.
-
----
-
 ## 📞 Kontak Resmi
 - 📧 Email: **nody.official.14@gmail.com**  
 - 📱 WhatsApp: **0811-6658-081**  
