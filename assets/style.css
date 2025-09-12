@@ -154,6 +154,7 @@ section h2 {
   padding: 12px 24px;
   border-radius: 5px;
   text-decoration: none;
+  align-items: center;
 }
 
 .kontak .btn:hover {
