@@ -1,6 +1,6 @@
-# Damar Trading
+# Nodi Jaya Teknik
 
-Website resmi **Damar Trading** – penyedia telur ayam segar & pakan ternak (konsentrat, jagung, dedak) di Payakumbuh, Sumatera Barat.
+Website resmi **Nodi Jaya Teknik** – penyedia telur ayam segar & pakan ternak (konsentrat, jagung, dedak) di Payakumbuh, Sumatera Barat.
 
 ## 🌐 Live Website
 [https://damartrading.web.id](https://damartrading.web.id)
