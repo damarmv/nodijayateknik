@@ -1,6 +1,6 @@
 # 🌐 Nodi Jaya Teknik Website
 
-Website profil resmi **Nodi Jaya Teknik** – penyedia jasa **pemasangan panel listrik 3 phase, instalasi water heater, dan layanan teknisi listrik profesional**.
+Website resmi **Nodi Jaya Teknik** – penyedia jasa **pemasangan panel listrik 3 phase, instalasi water heater, dan layanan teknisi listrik profesional**.
 
 ---
 
