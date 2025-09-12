@@ -159,6 +159,7 @@ section h2 {
 
 .kontak .btn:hover {
   background: #002244;
+  align-items: center;
 }
 
 /* ===== Footer ===== */
