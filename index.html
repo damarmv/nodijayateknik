@@ -17,44 +17,13 @@
   <meta property="og:type" content="business.business">
 
   <!-- CSS -->
-  <style>
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {font-family:'Montserrat',sans-serif; line-height:1.6; color:#333; background:#f9f9f9;}
-    header {background:#222; color:#fff; padding:15px 0;}
-    header .container {display:flex; justify-content:space-between; align-items:center; width:90%; margin:auto;}
-    header nav a {color:#fff; text-decoration:none; margin-left:20px; font-weight:600;}
-    header nav a:hover {color:#ffcc00;}
-    .hero {background:linear-gradient(rgba(0,51,102,0.7),rgba(0,51,102,0.7)), url('assets/gallery/Panel.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:80px 20px;}
-    .hero h1 {font-size:48px; margin-bottom:15px;}
-    .hero p {font-size:20px; margin-bottom:25px;}
-    .hero .btn {background:#ffcc00; color:#003366; padding:12px 24px; border-radius:5px; font-weight:bold; text-decoration:none;}
-    .hero .btn:hover {background:#e6b800;}
-    section {padding:60px 20px;}
-    section h2 {text-align:center; font-size:32px; margin-bottom:30px; color:#003366;}
-    .about p {max-width:800px; margin:auto; text-align:center; font-size:18px;}
-    .grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;}
-    .card {background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,0.1); text-align:center; padding-bottom:20px; transition:transform 0.2s ease;}
-    .card img, .card video {width:100%; height:180px; object-fit:cover;}
-    .card h3 {margin:15px 0; font-size:22px; color:#003366;}
-    .card p {font-size:16px; padding:0 15px;}
-    .card:hover {transform:translateY(-5px);}
-    .galeri .card img, .galeri .card video {height:200px;}
-    .clients ul {max-width:800px; margin:auto; list-style:none; font-size:18px; line-height:1.8;}
-    .testimoni .card {padding:25px;}
-    .testimoni .card p {font-style:italic; margin-bottom:15px;}
-    .testimoni .card h4 {font-weight:bold; color:#003366;}
-    .kontak p {text-align:center; font-size:18px; margin:10px 0;}
-    .kontak a {color:#003366; text-decoration:none;}
-    .kontak .btn { margin-top:20px; background:#003366; color:#fff; padding:12px 24px; border-radius:5px; text-decoration:none; text-align: center;}
-    .kontak .btn:hover {background:#002244;}
-    footer {background:#222; color:#fff; text-align:center; padding:15px 0; font-size:14px;}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="container">
-     <img src="assets/logo3.png" alt="Logo Nodi Jaya Teknik" class="logo" style="width: 100px; height: 100px; mix-blend-mode: multiply;">
+     <img src="assets/logo3.png" alt="Logo Nodi Jaya Teknik" class="logo">
     <nav>
       <a href="#about">Tentang</a>
       <a href="#layanan">Layanan</a>
@@ -88,18 +57,24 @@
     <div class="grid">
       <div class="card">
         <img src="assets/gallery/Panel12.jpg" loading="lazy" alt="Pemasangan Panel Listrik 3 Phase">
-        <h3>Pemasangan Panel Listrik 3 Phase</h3>
-        <p>Instalasi panel listrik untuk kebutuhan industri, kantor, maupun rumah besar. Menggunakan material standar SNI dengan keamanan maksimal.</p>
+        <div class="card-content">
+          <h3>Pemasangan Panel Listrik 3 Phase</h3>
+          <p>Instalasi panel listrik untuk kebutuhan industri, kantor, maupun rumah besar. Menggunakan material standar SNI dengan keamanan maksimal.</p>
+        </div>
       </div>
       <div class="card">
         <img src="assets/gallery/Water heater1.jpg" loading="lazy" alt="Instalasi Water Heater">
-        <h3>Instalasi Water Heater</h3>
-        <p>Pemasangan water heater listrik maupun tenaga surya untuk rumah tangga & komersial. Rapi, aman, dan tahan lama.</p>
+        <div class="card-content">
+          <h3>Instalasi Water Heater</h3>
+          <p>Pemasangan water heater listrik maupun tenaga surya untuk rumah tangga & komersial. Rapi, aman, dan tahan lama.</p>
+        </div>
       </div>
       <div class="card">
         <img src="assets/gallery/Instalasi.jpg" loading="lazy" alt="Jasa Teknisi Listrik">
-        <h3>Jasa Teknisi Listrik</h3>
-        <p>Perbaikan instalasi listrik, perawatan panel, hingga pemasangan instalasi baru. Ditangani teknisi berpengalaman dengan garansi pekerjaan.</p>
+        <div class="card-content">
+          <h3>Jasa Teknisi Listrik</h3>
+          <p>Perbaikan instalasi listrik, perawatan panel, hingga pemasangan instalasi baru. Ditangani teknisi berpengalaman dengan garansi pekerjaan.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -144,7 +119,7 @@
       <div class="card"><img src="assets/gallery/Wh13.jpg" loading="lazy" alt="Galeri Nodi Jaya Teknik"></div>
       <div class="card"><img src="assets/gallery/Wh14.jpg" loading="lazy" alt="Galeri Nodi Jaya Teknik"></div>
       <div class="card">
-        <video controls style="width:100%; height:100%; object-fit: cover;">
+        <video controls>
           <source src="assets/gallery/Wh17.mp4" type="video/mp4">
           Browser Anda tidak mendukung tag video.
         </video>
@@ -164,11 +139,11 @@
 <section class="clients">
   <h2>Kenapa Memilih Kami?</h2>
   <ul>
-    <li>✅ <strong>Profesional & Berpengalaman</strong> – ditangani teknisi ahli.</li>
-    <li>✅ <strong>Pekerjaan Rapi & Aman</strong> – sesuai standar instalasi kelistrikan.</li>
-    <li>✅ <strong>Respon Cepat</strong> – siap melayani kebutuhan listrik Anda.</li>
-    <li>✅ <strong>Harga Transparan & Bersaing</strong> – tanpa biaya tersembunyi.</li>
-    <li>✅ <strong>Garansi Pekerjaan</strong> – kepuasan Anda adalah prioritas kami.</li>
+    <li><strong>Profesional & Berpengalaman</strong> – ditangani teknisi ahli.</li>
+    <li><strong>Pekerjaan Rapi & Aman</strong> – sesuai standar instalasi kelistrikan.</li>
+    <li><strong>Respon Cepat</strong> – siap melayani kebutuhan listrik Anda.</li>
+    <li><strong>Harga Transparan & Bersaing</strong> – tanpa biaya tersembunyi.</li>
+    <li><strong>Garansi Pekerjaan</strong> – kepuasan Anda adalah prioritas kami.</li>
   </ul>
 </section>
 
@@ -177,16 +152,22 @@
     <h2>Testimoni Pelanggan</h2>
     <div class="grid">
       <div class="card">
-        <p>"Pekerjaan sangat rapi dan hasilnya memuaskan. Tim Nodi Jaya Teknik benar-benar profesional dan tahu apa yang mereka lakukan. Sangat direkomendasikan!"</p>
-        <h4>- Bapak Budi, Payakumbuh</h4>
+        <div class="card-content">
+          <p>"Pekerjaan sangat rapi dan hasilnya memuaskan. Tim Nodi Jaya Teknik benar-benar profesional dan tahu apa yang mereka lakukan. Sangat direkomendasikan!"</p>
+          <h4>- Bapak Budi, Payakumbuh</h4>
+        </div>
       </div>
       <div class="card">
-        <p>"Instalasi panel listrik untuk usaha saya berjalan lancar tanpa kendala. Harganya transparan dan sesuai dengan hasil. Terima kasih Nodi Jaya Teknik."</p>
-        <h4>- Ibu Ani, Limapuluh Kota</h4>
+        <div class="card-content">
+          <p>"Instalasi panel listrik untuk usaha saya berjalan lancar tanpa kendala. Harganya transparan dan sesuai dengan hasil. Terima kasih Nodi Jaya Teknik."</p>
+          <h4>- Ibu Ani, Limapuluh Kota</h4>
+        </div>
       </div>
       <div class="card">
-        <p>"Respon cepat dan pengerjaan tepat waktu. Saya sangat terbantu dengan jasa perbaikan instalasi listrik di rumah saya. Pasti akan pakai jasa mereka lagi."</p>
-        <h4>- Bapak Chandra, Sarilamak</h4>
+        <div class="card-content">
+          <p>"Respon cepat dan pengerjaan tepat waktu. Saya sangat terbantu dengan jasa perbaikan instalasi listrik di rumah saya. Pasti akan pakai jasa mereka lagi."</p>
+          <h4>- Bapak Chandra, Sarilamak</h4>
+        </div>
       </div>
     </div>
   </div>
