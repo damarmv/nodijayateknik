@@ -180,9 +180,10 @@
       background: #f8f9fa;
     }
 
-    .galeri .card img,
-    .galeri .card video {
-      height: 250px;
+    .galeri .card img {
+      height: 300px;
+      object-fit: contain;
+      background-color: #f0f0f0;
     }
 
     .clients {
@@ -393,7 +394,7 @@
     /* Gallery Grid Adjustments */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 30px;
     }
 
