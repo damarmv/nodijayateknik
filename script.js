@@ -1,103 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Hamburger Menu Logic
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('header nav');
+document.addEventListener("DOMContentLoaded", function() {
+  // Back to top button
+  var backToTopButton = document.getElementById("back-to-top");
 
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  });
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  };
 
-  document.querySelectorAll('header nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        hamburger.classList.remove('active');
-    });
-  });
+  backToTopButton.onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
 
-  // Gallery Filter Logic
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const galleryCards = document.querySelectorAll('.gallery-grid .card');
+  // Fade-in animation
+  const fadeInElements = document.querySelectorAll(".fade-in");
 
-  const updateVisibleItems = () => {
-    visibleItems = [];
-    galleryItems.forEach(item => {
-      if (item.closest('.card').style.display !== 'none') {
-        visibleItems.push(item);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
       }
     });
-  };
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      const filter = button.dataset.filter;
-      galleryCards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-      // Update the visible items array for the lightbox
-      setTimeout(updateVisibleItems, 10); 
-    });
   });
 
-  // Lightbox Logic
-  const lightbox = document.getElementById('myLightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const captionText = document.getElementById('caption');
-  const closeBtn = document.querySelector('.close-lightbox');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  const prevBtn = document.querySelector('.lightbox .prev');
-  const nextBtn = document.querySelector('.lightbox .next');
-
-  let currentImageIndex;
-  let visibleItems = [];
-
-  const openLightbox = (elem) => {
-    currentImageIndex = visibleItems.indexOf(elem);
-    lightbox.style.display = 'block';
-    lightboxImg.src = elem.href;
-    captionText.innerHTML = elem.querySelector('img').alt;
-  };
-
-  const closeLightbox = () => {
-    lightbox.style.display = 'none';
-  };
-
-  const showNextImage = () => {
-    currentImageIndex = (currentImageIndex + 1) % visibleItems.length;
-    const nextItem = visibleItems[currentImageIndex];
-    lightboxImg.src = nextItem.href;
-    captionText.innerHTML = nextItem.querySelector('img').alt;
-  };
-
-  const showPrevImage = () => {
-    currentImageIndex = (currentImageIndex - 1 + visibleItems.length) % visibleItems.length;
-    const prevItem = visibleItems[currentImageIndex];
-    lightboxImg.src = prevItem.href;
-    captionText.innerHTML = prevItem.querySelector('img').alt;
-  };
-
-  galleryItems.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault();
-      openLightbox(item);
-    });
+  fadeInElements.forEach(element => {
+    observer.observe(element);
   });
 
-  closeBtn.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
-  });
-  nextBtn.addEventListener('click', showNextImage);
-  prevBtn.addEventListener('click', showPrevImage);
+  // Hamburger menu
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+  const mainNav = document.getElementById("main-nav");
 
-  // Initial population of visible items
-  updateVisibleItems();
+  hamburgerMenu.addEventListener("click", function() {
+    hamburgerMenu.classList.toggle("active");
+    mainNav.classList.toggle("active");
+  });
 });
