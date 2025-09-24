@@ -455,6 +455,20 @@ footer {
   }
 }
 
+@media (min-width: 769px) {
+  .kontak .container {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+  .contact-details {
+    flex: 0 0 40%;
+    margin-right: 20px;
+  }
+  .map-container {
+    flex: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
