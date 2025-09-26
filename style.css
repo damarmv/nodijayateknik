@@ -160,20 +160,20 @@ body {
 }
 
 .btn {
-  background-color: #4A4A4A;
+  background-color: #007bff;
   color: #F4F1ED;
   padding: 12px 25px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  border: 2px solid #4A4A4A;
+  border: 2px solid #007bff;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .btn:hover {
-  background-color: #B3A18F;
-  color: #212121;
-  border-color: #B3A18F;
+  background-color: #0056b3;
+  color: #F4F1ED;
+  border-color: #0056b3;
 }
 
 .about, .produk, .kontak, .gallery {
