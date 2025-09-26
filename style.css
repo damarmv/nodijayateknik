@@ -409,10 +409,6 @@ footer {
     color: #4A4A4A;
 }
 
-.fa-light {
-    font-weight: 300;
-}
-
 /* Responsive adjustments */
 @media (max-width: 992px) {
   #main-nav {
