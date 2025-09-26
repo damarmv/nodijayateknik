@@ -380,7 +380,7 @@ footer {
 .contact-details {
     flex: 1;
     min-width: 300px;
-    text-align: left;
+    text-align: center;
 }
 
 .map-container {
