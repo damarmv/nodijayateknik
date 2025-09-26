@@ -298,11 +298,10 @@ h2 {
   object-fit: contain;
   transition: 0.3s;
   border-radius: 50%;
-  filter: grayscale(100%);
 }
 
 .client:hover img {
-  filter: grayscale(0%) drop-shadow(0px 0px 10px #aaa);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .client p {
