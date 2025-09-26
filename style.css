@@ -259,13 +259,26 @@ h2 {
 
 .client-logos {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  align-items: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.client-logos::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 .client {
+  flex: 0 0 auto;
   text-align: center;
+  margin: 0 20px;
+  transition: transform 0.3s;
+}
+
+.client:hover {
+  transform: scale(1.05);
 }
 
 .client img {
@@ -273,10 +286,12 @@ h2 {
   height: auto;
   filter: grayscale(0%);
   transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
 .client img:hover {
-  filter: grayscale(0%) drop-shadow(0px 0px 5px #aaa);
+  filter: grayscale(0%) drop-shadow(0px 0px 10px #aaa);
 }
 
 .client p {
