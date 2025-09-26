@@ -62,4 +62,17 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   }
+
+  // WhatsApp link changer
+  const whatsappLinks = document.querySelectorAll(".whatsapp-link");
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  whatsappLinks.forEach(link => {
+      const phone = link.href.split("phone=")[1];
+      if (isMobile) {
+          link.href = `whatsapp://send?phone=${phone}`;
+      } else {
+          link.href = `https://wa.me/${phone}`;
+      }
+  })
 });
