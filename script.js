@@ -81,9 +81,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const logosContainer = document.querySelector(".client-logos");
 
   if (carousel && logosContainer) {
-    // The container itself will be animated, not the inner div
-    const originalLogosHTML = carousel.innerHTML;
-    carousel.innerHTML += originalLogosHTML;
+    // Duplicate the logos inside the container for a seamless loop
+    const originalLogosHTML = logosContainer.innerHTML;
+    logosContainer.innerHTML += originalLogosHTML;
 
     carousel.classList.add("scrolling");
 
