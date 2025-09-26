@@ -181,7 +181,7 @@ body {
   text-align: center;
 }
 
-.produk, .kontak {
+.produk, .kontak, .clients {
     background-color: #E8E3DD;
 }
 
@@ -373,7 +373,7 @@ footer {
 
 .kontak .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; 
     gap: 20px;
 }
 
@@ -409,6 +409,9 @@ footer {
     color: #4A4A4A;
 }
 
+.fa-light {
+    font-weight: 300;
+}
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
@@ -464,20 +467,8 @@ footer {
 
 @media (min-width: 769px) {
   .kontak .container {
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-  .contact-details {
-    flex: 0 0 40%;
-    margin-right: 20px;
-  }
-  .map-container {
-    flex: 1;
-    align-self: stretch;
-  }
-
-  .map-container iframe {
-      height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
 
