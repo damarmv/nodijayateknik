@@ -74,5 +74,26 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
           link.href = `https://wa.me/${phone}`;
       }
-  })
+  });
+
+  // Client Logo Carousel
+  const carousel = document.querySelector(".client-logo-carousel");
+  const logosContainer = document.querySelector(".client-logos");
+
+  if (carousel && logosContainer) {
+    // The container itself will be animated, not the inner div
+    const originalLogosHTML = carousel.innerHTML;
+    carousel.innerHTML += originalLogosHTML;
+
+    carousel.classList.add("scrolling");
+
+    const clientsSection = document.querySelector(".clients");
+    clientsSection.addEventListener("mouseenter", () => {
+      carousel.classList.remove("scrolling");
+    });
+
+    clientsSection.addEventListener("mouseleave", () => {
+      carousel.classList.add("scrolling");
+    });
+  }
 });
