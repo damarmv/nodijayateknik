@@ -262,11 +262,6 @@ h2 {
   color: #212121;
 }
 
-.client-logo-carousel {
-  display: inline-block;
-  white-space: nowrap;
-}
-
 .client-logo-carousel.scrolling {
   animation: scroll 30s linear infinite;
 }
@@ -280,12 +275,16 @@ h2 {
   }
 }
 
+.client-logos {
+    display: flex;
+    align-items: center;
+}
+
 .client {
-  display: inline-block;
+  flex-shrink: 0;
   text-align: center;
-  margin: 0 20px;
+  margin: 0 40px;
   transition: transform 0.3s;
-  vertical-align: middle;
 }
 
 .client:hover {
@@ -496,10 +495,6 @@ footer {
 
   h2 {
     font-size: 1.8rem;
-  }
-
-  .client-logos {
-    gap: 20px;
   }
 }
 
