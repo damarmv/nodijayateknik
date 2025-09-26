@@ -282,8 +282,9 @@ h2 {
 }
 
 .client img {
-  max-width: 160px;
-  height: auto;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
   filter: grayscale(0%);
   transition: 0.3s;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
