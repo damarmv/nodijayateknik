@@ -388,6 +388,13 @@ footer {
     min-width: 300px;
 }
 
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 8px;
+}
+
 .contact-details p {
     margin-bottom: 15px;
 }
@@ -458,7 +465,7 @@ footer {
 @media (min-width: 769px) {
   .kontak .container {
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: center;
   }
   .contact-details {
     flex: 0 0 40%;
@@ -466,6 +473,11 @@ footer {
   }
   .map-container {
     flex: 1;
+    align-self: stretch;
+  }
+
+  .map-container iframe {
+      height: 100%;
   }
 }
 
